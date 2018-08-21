@@ -1,7 +1,13 @@
 'use stict';
 
 function max(numbers) {
-  // your code here
+  let maxVal = numbers[0];
+  for (let num of numbers){
+    if(num > maxVal){
+      maxVal = num;
+    }
+  }
+  return maxVal;
 }
 
 function min(numbers) {
@@ -37,7 +43,7 @@ function fizzBuzz(countTo) {
   }
 })();
 
-function testFunctionWorks(fn, input, expected) {
+function testFunctionWorks1(fn, input, expected) {
   if (fn(input) === expected) {
     console.log('SUCCESS: `' + fn.name + '` works on `[' + input + ']`');
     return true;
@@ -63,8 +69,8 @@ function testFunctionWorks(fn, input, expected) {
   const correctAns2 = 0;
 
   const testResults = [
-    testFunctionWorks(average, numList1, correctAns1),
-    testFunctionWorks(average, numList2, correctAns2),
+    testFunctionWorks1(average, numList1, correctAns1),
+    testFunctionWorks1(average, numList2, correctAns2),
   ];
   const numPassing = testResults.filter(function(result) {
     return result;
@@ -72,7 +78,7 @@ function testFunctionWorks(fn, input, expected) {
   console.log(numPassing + ' out of ' + testResults.length + ' tests passing.');
 })();
 
-function testFunctionWorks(fn, input, expected) {
+function testFunctionWorks2(fn, input, expected) {
   if (fn(input) === expected) {
     console.log('SUCCESS: `' + fn.name + '` works on `[' + input + ']`');
     return true;
@@ -113,10 +119,10 @@ function testEmpty(fn) {
   const realMax2 = numList2[4];
 
   const testResults = [
-    testFunctionWorks(max, numList1, realMax1),
-    testFunctionWorks(max, numList2, realMax2),
-    testFunctionWorks(min, numList1, realMin1),
-    testFunctionWorks(min, numList2, realMin2),
+    testFunctionWorks2(max, numList1, realMax1),
+    testFunctionWorks2(max, numList2, realMax2),
+    testFunctionWorks2(min, numList1, realMin1),
+    testFunctionWorks2(min, numList2, realMin2),
     testEmpty(max),
     testEmpty(min),
   ];
