@@ -32,7 +32,21 @@ function average(numbers) {
 }
 
 function fizzBuzz(countTo) {
-  // your code here
+  let fizzArr = [];
+  for(let i = 0; i < countTo; i++){
+    let curNum = i + 1;
+    if(curNum % 15 === 0){
+      fizzArr[i] = 'fizzbuzz';
+    } else if (curNum % 5 === 0){
+      fizzArr[i] = 'buzz';
+    } else if (curNum % 3 === 0){
+      fizzArr[i] = 'fizz';
+    } else {
+      fizzArr[i] = curNum;
+    }
+
+  }
+  return fizzArr;
 }
 
 
