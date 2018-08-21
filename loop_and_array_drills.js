@@ -11,7 +11,13 @@ function max(numbers) {
 }
 
 function min(numbers) {
-  // your code here
+  let minVal = numbers[0];
+  for (let num of numbers){
+    if(num < minVal){
+      minVal = num;
+    }
+  }
+  return minVal;
 }
 
 function average(numbers) {
