@@ -21,7 +21,14 @@ function min(numbers) {
 }
 
 function average(numbers) {
-  // your code goes here
+  if(numbers.length === 0){
+    return 0;
+  }
+  let runningTotal = 0;
+  for (let num of numbers){
+    runningTotal += num
+  }
+  return runningTotal/numbers.length;
 }
 
 function fizzBuzz(countTo) {
