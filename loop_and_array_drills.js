@@ -23,13 +23,9 @@ function min(numbers) {
 }
 
 function average(numbers) {
-  if(numbers.length === 0){
-    return 0;
-  }
+  if(numbers.length === 0) return 0; 
   let runningTotal = 0;
-  for (let num of numbers){
-    runningTotal += num
-  }
+  numbers.forEach(num => runningTotal += num);
   return runningTotal/numbers.length;
 }
 
